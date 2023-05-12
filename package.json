@@ -4,7 +4,9 @@
   "description": "wallaby testing sample",
   "main": "app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "node ./node_modules/typescript/bin/tsc --build --clean tsconfig.json --verbose",
+    "jest": "jest --config=jest.config.ts",
+    "jest-coverage": "jest --config=jest.config.ts --coverage"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/Nutriadmin/test-wallaby/issues"
   },
-  "homepage": "https://github.com/Nutriadmin/test-wallaby#readme"
+  "homepage": "https://github.com/Nutriadmin/test-wallaby#readme",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/jest": "27.4.1",
+    "babel-jest": "27.5.1",
+    "jest": "27.5.1",
+    "ts-jest": "27.1.4",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.9.1"
+  }
 }
